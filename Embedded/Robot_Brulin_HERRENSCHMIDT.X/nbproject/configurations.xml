@@ -30,6 +30,8 @@
       <itemPath>ToolBox.h</itemPath>
       <itemPath>PWM.c</itemPath>
       <itemPath>PWM.h</itemPath>
+      <itemPath>ADC.c</itemPath>
+      <itemPath>ADC.h</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
