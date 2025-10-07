@@ -24,6 +24,12 @@
       <itemPath>IO.h</itemPath>
       <itemPath>timer.c</itemPath>
       <itemPath>timer.h</itemPath>
+      <itemPath>Robot.h</itemPath>
+      <itemPath>Robot.c</itemPath>
+      <itemPath>ToolBox.c</itemPath>
+      <itemPath>ToolBox.h</itemPath>
+      <itemPath>PWM.c</itemPath>
+      <itemPath>PWM.h</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>

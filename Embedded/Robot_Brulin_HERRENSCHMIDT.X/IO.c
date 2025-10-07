@@ -31,7 +31,8 @@ void InitIO() {
     _TRISA9 = 0; // LED Bleue2
     _TRISA10 = 0; // LED Rouge2
     _TRISH3 = 0; // LED Verte2
-
+    
+    _TRISJ10 = 0; // Enable_PWM
     
     //****** Moteurs ************************
 

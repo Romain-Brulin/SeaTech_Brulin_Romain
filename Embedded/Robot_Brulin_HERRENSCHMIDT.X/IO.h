@@ -13,6 +13,8 @@
 #define LED_ROUGE_2 _LATA10
 #define LED_VERTE_2 _LATH3
 
+#define EN_PWM _LATJ10
+
 // Prototypes fonctions
 void InitIO();
 void LockIO();
