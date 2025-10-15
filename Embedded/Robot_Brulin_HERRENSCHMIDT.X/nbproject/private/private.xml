@@ -10,6 +10,14 @@
             <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/IO.h</file>
             <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/timer.c</file>
             <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/timer.h</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/Robot.h</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/Robot.c</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/ToolBox.c</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/ToolBox.h</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/PWM.c</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/PWM.h</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/ADC.c</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/ADC.h</file>
         </group>
     </open-files>
 </project-private>
