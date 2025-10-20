@@ -8,6 +8,7 @@
 
 unsigned char toggle = 0;
 unsigned long timestamp;
+unsigned int marche = 0;
 
 //Initialisation d?un timer 16 bits
 
@@ -24,14 +25,14 @@ void InitTimer1(void) {
     IFS0bits.T1IF = 0; // Clear Timer Interrupt Flag
     IEC0bits.T1IE = 1; // Enable Timer interrupt
     T1CONbits.TON = 1; // Enable Timer
-    SetFreqTimer1(50);
+    SetFreqTimer1(500);
 }
 //Interruption du timer 1
 
 void __attribute__((interrupt, no_auto_psv)) _T1Interrupt(void) {
     IFS0bits.T1IF = 0;
     //LED_BLANCHE_1 = !LED_BLANCHE_1;
-    LED_BLEUE_1 = !LED_BLEUE_1;
+    LED_BLEUE_2 = !LED_BLEUE_2;
     PWMUpdateSpeed();
     ADC1StartConversionSequence();
 }
@@ -42,11 +43,11 @@ void InitTimer23(void) {
     T2CONbits.TON = 0; // Stop any 16/32-bit Timer3 operation
     T2CONbits.T32 = 1; // Enable 32-bit Timer mode
     T2CONbits.TCS = 0; // Select internal instruction cycle clock
-    T2CONbits.TCKPS = 0b10; // Select 1:1 Prescaler
+    T2CONbits.TCKPS = 0b11; // Select 1:1 Prescaler
     TMR3 = 0x00; // Clear 32-bit Timer (msw)
     TMR2 = 0x00; // Clear 32-bit Timer (lsw)
-    PR3 = 0x000E; // Load 32-bit period value (msw)
-    PR2 = 0x4E20; // Load 32-bit period value (lsw)
+    PR3 = 0x00D6; // Load 32-bit period value (msw)
+    PR2 = 0x93A6; // Load 32-bit period value (lsw)
     IPC2bits.T3IP = 0x01; // Set Timer3 Interrupt Priority Level
     IFS0bits.T3IF = 0; // Clear Timer3 Interrupt Flag
     IEC0bits.T3IE = 1; // Enable Timer3 interrupt
@@ -57,7 +58,8 @@ void InitTimer23(void) {
 
 void __attribute__((interrupt, no_auto_psv)) _T3Interrupt(void) {
     IFS0bits.T3IF = 0; // Clear Timer3 Interrupt Flag
-    LED_ORANGE_1 = !LED_ORANGE_1;
+    LED_ORANGE_2 = !LED_ORANGE_2;
+    marche = 0;
 //    if (toggle == 0) {
 //        PWMSetSpeedConsigne(20, MOTEUR_DROIT);
 //        PWMSetSpeedConsigne(20, MOTEUR_GAUCHE);
@@ -80,7 +82,7 @@ void InitTimer4(void) {
 
 void __attribute__((interrupt, no_auto_psv)) _T4Interrupt(void) {
     IFS1bits.T4IF = 0;
-    LED_VERTE_1 = !LED_VERTE_1;
+    LED_VERTE_2 = !LED_VERTE_2;
     OperatingSystemLoop();
     timestamp += 1;
 }

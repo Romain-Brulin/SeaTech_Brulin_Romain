@@ -28,9 +28,12 @@
 #define OBSTACLE_A_GAUCHE 1
 #define OBSTACLE_A_DROITE 2
 #define OBSTACLE_EN_FACE 3
+#define OBSTACLE_EXTREME_GAUCHE 4
+#define OBSTACLE_EXTREME_DROITE 5
 
 void OperatingSystemLoop();
 void SetNextRobotStateInAutomaticMode();
+//void setMarche();
 
 #endif	/* MAIN_H */
 

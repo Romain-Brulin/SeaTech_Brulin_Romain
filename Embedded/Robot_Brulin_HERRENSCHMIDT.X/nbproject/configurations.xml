@@ -33,6 +33,8 @@
       <itemPath>ADC.c</itemPath>
       <itemPath>ADC.h</itemPath>
       <itemPath>main.h</itemPath>
+      <itemPath>Bouton.c</itemPath>
+      <itemPath>Bouton.h</itemPath>
     </logicalFolder>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
