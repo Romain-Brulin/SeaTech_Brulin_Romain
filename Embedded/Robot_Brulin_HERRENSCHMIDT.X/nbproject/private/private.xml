@@ -2,6 +2,25 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/ADC.c</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/ADC.h</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/ChipConfig.c</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/ChipConfig.h</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/IO.c</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/IO.h</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/main.c</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/main.h</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/PWM.c</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/PWM.h</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/Robot.c</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/Robot.h</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/timer.c</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/timer.h</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/ToolBox.c</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/ToolBox.h</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/Bouton.c</file>
+            <file>file:/C:/Github/SeaTech_Brulin_Romain/Embedded/Robot_Brulin_HERRENSCHMIDT.X/Bouton.h</file>
+        </group>
     </open-files>
 </project-private>

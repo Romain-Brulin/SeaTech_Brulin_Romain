@@ -8,7 +8,6 @@
 
 unsigned char toggle = 0;
 unsigned long timestamp;
-unsigned int marche = 0;
 
 //Initialisation d?un timer 16 bits
 

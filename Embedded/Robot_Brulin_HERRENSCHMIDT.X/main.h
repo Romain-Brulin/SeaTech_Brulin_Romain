@@ -33,7 +33,7 @@
 
 void OperatingSystemLoop();
 void SetNextRobotStateInAutomaticMode();
-//void setMarche();
+void setMarche();
 
 #endif	/* MAIN_H */
 
