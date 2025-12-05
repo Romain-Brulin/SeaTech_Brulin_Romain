@@ -5,7 +5,7 @@
 #include "ToolBox.h"
 
 #define PWMPER 24.0
-#define acceleration 20
+#define acceleration 40
 
 void InitPWM(void) {
     PTCON2bits.PCLKDIV = 0b000; //Divide by 1

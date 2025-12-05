@@ -61,7 +61,8 @@ int main(void) {
         //        }
         if(!robotEnMarche && _RH0 ==1){
             robotEnMarche = 1;
-            timer = timestamp;
+            timestamp = 0;
+            timer = 0;
             stateRobot = STATE_ATTENTE;
             LED_ROUGE_2 = 1;
         }
@@ -139,15 +140,15 @@ void OperatingSystemLoop(void) {
                 stateRobot = STATE_AVANCE;
             break;
         case STATE_AVANCE:
-            PWMSetSpeedConsigne(25, MOTEUR_DROIT);
-            PWMSetSpeedConsigne(25, MOTEUR_GAUCHE);
+            PWMSetSpeedConsigne(30, MOTEUR_DROIT);
+            PWMSetSpeedConsigne(30, MOTEUR_GAUCHE);
             stateRobot = STATE_AVANCE_EN_COURS;
             break;
         case STATE_AVANCE_EN_COURS:
             SetNextRobotStateInAutomaticMode();
             break;
         case STATE_TOURNE_GAUCHE:
-            PWMSetSpeedConsigne(20, MOTEUR_DROIT);
+            PWMSetSpeedConsigne(15, MOTEUR_DROIT);
             PWMSetSpeedConsigne(0, MOTEUR_GAUCHE);
             stateRobot = STATE_TOURNE_GAUCHE_EN_COURS;
             break;
@@ -156,7 +157,7 @@ void OperatingSystemLoop(void) {
             break;
         case STATE_TOURNE_DROITE:
             PWMSetSpeedConsigne(0, MOTEUR_DROIT);
-            PWMSetSpeedConsigne(20, MOTEUR_GAUCHE);
+            PWMSetSpeedConsigne(15, MOTEUR_GAUCHE);
             stateRobot = STATE_TOURNE_DROITE_EN_COURS;
             break;
         case STATE_TOURNE_DROITE_EN_COURS:
@@ -188,13 +189,13 @@ void OperatingSystemLoop(void) {
 void SetNextRobotStateInAutomaticMode() {
     
     int capteur0 = robotState.distanceTelemetreExtremeGauche < 15;
-    int capteur1 = robotState.distanceTelemetreGauche < 40;
-    int capteur2 = robotState.distanceTelemetreCentre < 50;
-    int capteur3 = robotState.distanceTelemetreDroit < 40;
+    int capteur1 = robotState.distanceTelemetreGauche < 35;
+    int capteur2 = robotState.distanceTelemetreCentre < 45;
+    int capteur3 = robotState.distanceTelemetreDroit < 35;
     int capteur4 = robotState.distanceTelemetreExtremeDroit < 15;
+    int tg = 0;
     
     int positionObstacle = (capteur0 << 4) | (capteur1 << 3) | (capteur2 << 2) | (capteur3 << 1) | capteur4;
-
     if (positionObstacle == 0b00000){
         nextStateRobot = STATE_AVANCE;
     }
@@ -207,9 +208,23 @@ void SetNextRobotStateInAutomaticMode() {
     else if(positionObstacle == 0b00011){
         nextStateRobot = STATE_TOURNE_GAUCHE;
     }
-    else if(positionObstacle == 0b00100){
+    
+    
+    else if(positionObstacle == 0b00100){       
         nextStateRobot = STATE_TOURNE_SUR_PLACE_GAUCHE;
     }
+
+    
+//    else if(positionObstacle == 0b00100){
+//        if (tg < 3){
+//            nextStateRobot = STATE_TOURNE_SUR_PLACE_GAUCHE;
+//            tg = tg + 1;
+//        }
+//        else {
+//            nextStateRobot = STATE_TOURNE_SUR_PLACE_DROITE;
+//            tg = 0;
+//        }
+//    }
     else if(positionObstacle == 0b00101){
         nextStateRobot = STATE_TOURNE_GAUCHE;
     }
@@ -238,7 +253,7 @@ void SetNextRobotStateInAutomaticMode() {
         nextStateRobot = STATE_TOURNE_SUR_PLACE_GAUCHE;
     }
     else if(positionObstacle == 0b01110){
-        nextStateRobot = STATE_TOURNE_SUR_PLACE_GAUCHE;
+        nextStateRobot = STATE_TOURNE_SUR_PLACE_DROITE;
     }
     else if(positionObstacle == 0b01111){
         nextStateRobot = STATE_TOURNE_SUR_PLACE_GAUCHE;
